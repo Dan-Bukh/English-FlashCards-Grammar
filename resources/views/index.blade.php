@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>EnglishGrammar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
-<body>
-    @include('includes.header')
-    <main class="mt-5">
+@extends('layouts.base')
+@section('content')
     <div class="container-fluid">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, inventore! Sint, eos? Doloremque illum nam reprehenderit quaerat minima, consequuntur vel pariatur harum sequi magni quisquam modi, ad tenetur ex explicabo!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, inventore! Sint, eos? Doloremque illum nam reprehenderit quaerat minima, consequuntur vel pariatur harum sequi magni quisquam modi, ad tenetur ex explicabo!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, inventore! Sint, eos? Doloremque illum nam reprehenderit quaerat minima, consequuntur vel pariatur harum sequi magni quisquam modi, ad tenetur ex explicabo!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, inventore! Sint, eos? Doloremque illum nam reprehenderit quaerat minima, consequuntur vel pariatur harum sequi magni quisquam modi, ad tenetur ex explicabo!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, inventore! Sint, eos? Doloremque illum nam reprehenderit quaerat minima, consequuntur vel pariatur harum sequi magni quisquam modi, ad tenetur ex explicabo!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, inventore! Sint, eos? Doloremque illum nam reprehenderit quaerat minima, consequuntur vel pariatur harum sequi magni quisquam modi, ad tenetur ex explicabo!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, inventore! Sint, eos? Doloremque illum nam reprehenderit quaerat minima, consequuntur vel pariatur harum sequi magni quisquam modi, ad tenetur ex explicabo!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, inventore! Sint, eos? Doloremque illum nam reprehenderit quaerat minima, consequuntur vel pariatur harum sequi magni quisquam modi, ad tenetur ex explicabo!</p>
+        <h1>Welcome</h1>
+        <h2>it's home page my website</h2>
     </div>
-    </main>
-
-    @include('includes.footer')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
-</html>
+@endsection
