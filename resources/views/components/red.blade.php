@@ -1,0 +1,1 @@
+<span style="color:#EB4E36;">{{$slot}}</span>

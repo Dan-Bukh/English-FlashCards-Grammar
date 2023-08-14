@@ -6,6 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EnglishGrammar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        a {
+            color: #3bafda;
+            text-decoration:none;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        h1, h4, p {
+            color:#3a3f5d;
+        }
+        body {
+            margin-top: 5em;
+        }
+    </style>
 </head>
 <body>
     @include('includes.header')
