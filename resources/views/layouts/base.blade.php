@@ -14,7 +14,7 @@
         a:hover{
             text-decoration:underline;
         }
-        h1, h4, p {
+        h1, h2, h3, h4, p {
             color:#3a3f5d;
         }
         body {
