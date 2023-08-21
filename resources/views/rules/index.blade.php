@@ -8,7 +8,7 @@
                     <h4 class="mb-3">{{ $posts[$i]['title'] }}</h4>
                     <ul style="list-style-type:none">
                         @for($y = 0; $y < (count($posts[$i])-1); $y++)
-                        <li><a href="{{ route('grammar.show', $posts[$i][$y]['link']) }}">{{ $posts[$i][$y][0] }}</a></li>
+                        <li><a class="link-primary" href="{{ route('grammar.show', $posts[$i][$y]['link']) }}">{{ $posts[$i][$y][0] }}</a></li>
                         @endfor
                     </ul>
                 </div>       

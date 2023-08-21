@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Word;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,41 +12,58 @@ class WordController extends Controller
         return view('words.index');
     }
 
-    public function show(Request $request, int $post) 
+    public function show(Request $request, $post) 
     {
         //$card = $request->input('card');
 
-        $word = [
+        // $word = [
             
-            '1' => (object) [
-                'title' => 'Arrest',
-                'title_translated' => 'задерживать, тормозить',
+        //     '1' => (object) [
+        //         'title' => 'Arrest',
+        //         'title_translated' => 'задерживать, тормозить',
 
-                'text' => 'A dead calm arrested our progress.',
-                'text_translated' => 'Мёртвый штиль остановил наше продвижение.',
+        //         'text' => 'A dead calm arrested our progress.',
+        //         'text_translated' => 'Мёртвый штиль остановил наше продвижение.',
                 
-                'img' => '\image\arrest.jpg',
-            ],
+        //         'img' => '\image\arrest.jpg',
+        //     ],
 
-            '2' => (object) [
-                'title' => 'Nominate',
-                'title_translated' => 'выдвигать, номинировать',
+        //     '2' => (object) [
+        //         'title' => 'Nominate',
+        //         'title_translated' => 'выдвигать, номинировать',
     
-                'text' => 'candidates were nominated.',
-                'text_translated' => 'Были выдвинуты трое кандидатов.',
+        //         'text' => 'candidates were nominated.',
+        //         'text_translated' => 'Были выдвинуты трое кандидатов.',
                 
-                'img' => '\image\nominate.jpg',
-                ]
-            ];
+        //         'img' => '\image\nominate.jpg',
+        //         ]
+        //     ];
 
-        if ($post >= 0  && $post <= count($word)) {
-            return view('words.show', compact('word', 'post'));
-        } else {
-            return abort('404');
-        }
+        // if ($post >= 0  && $post <= count($word)) {
+        //     return view('words.show', compact('word', 'post'));
+        // } else {
+        //     return abort('404');
+        // }
+        $wordCount = Word::query()->count();
 
-        
+        if(is_numeric($post)) {
 
-        
+            $word = Word::query()->where('id', $post)->get();
+                if($word->contains($post)) {
+                    return view('words.show', compact('word', 'wordCount'));
+                } else {
+                    return view('words.index');
+                }
+
+        } else if (is_string($post)) {
+
+            $word = Word::query()->where('title', $post)->get();
+
+                if($word->toArray() ==! null) {
+                    return view('words.show', compact('word', 'wordCount')); 
+                } else {
+                    return view('words.index');
+                }
+        }  
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GrammarController;
+use App\Http\Controllers\SeparateController;
 use App\Http\Controllers\WordController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,10 @@ Route::get('grammar/{post}', [GrammarController::class, 'show'])->name('grammar.
 
 Route::get('words', [WordController::class, 'index'])->name('words');
 Route::get('words/{post}', [WordController::class, 'show'])->name('words.show');
+
+Route::get('separate', [SeparateController::class, 'index'])->name('separate');
+
+
 
 //Route::get('rule', [RuleController::class, 'rules.index'])->name('rule');
 //Route::get('blog/{post}', [BlogController::class, 'show'])->name('blog.show');

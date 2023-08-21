@@ -8,13 +8,12 @@
                     <br>
                     <h1>Карточки для изучения слов</h1>
                     <br>
+                    <p>Нажимайте на стрелочки ( &#x25C4; , &#x25BA; ) чтобы перемещаться по карточкам <br>или<br> воспользуйтесь поиском ( слово или номер )</p>
+
+                    <a href="{{ route('words.show', 'arouse') }}" style="text-decoration:none;" class="btn btn-outline-primary fs-2">Начать</a>
                     <br>
                     <br>
-                    <a href="{{ route('words.show', 1) }}" style="text-decoration:none;" class="btn btn-primary fs-2">Начать</a>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+
                 </div>
             </div>
 
