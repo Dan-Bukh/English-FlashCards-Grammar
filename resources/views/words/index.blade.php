@@ -2,8 +2,8 @@
 @section('content')
     <div class="container-fluid">
         <div class="text-center">
-            <div class="row justify-content-center ">
-                <div class="col-6 border">
+            <div class="row justify-content-center mx-3">
+                <div class="col-sm-12 col-md-6 col-lg-6 border bg-body-tertiary rounded-5">
                     <br>
                     <br>
                     <h1>Карточки для изучения слов</h1>

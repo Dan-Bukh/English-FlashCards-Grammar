@@ -1,9 +1,9 @@
 <header class="py-3">
     <div class="container">
-        <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary border-bottom" >
+        <nav class="navbar navbar-expand-md fixed-top" >
             <div class="container-md">
               
-              <a style="color:#3a3f5d;text-decoration:none;" href="{{route('home')}}" class="navbar-brand fst-italic ps-3">EnglishGrammar</a>
+              <a style="text-decoration:none;" href="{{route('home')}}" class="navbar-brand fst-italic ps-3"><img style="width:200px" src="{{ asset('/image/web_logo.jpeg') }}" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>

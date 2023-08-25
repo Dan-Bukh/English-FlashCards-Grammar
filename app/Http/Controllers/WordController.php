@@ -45,11 +45,24 @@ class WordController extends Controller
         //     return abort('404');
         // }
         $wordCount = Word::query()->count();
+        function wordAccept ($id, $title, $title_translate, $text, $text_translate, $link, $author_img) {
+            return $word = (object) [
+                'id' => $id,
+                'title' => $title,
+                'title_translate' => $title_translate,
+                'text' => $text,
+                'text_translate' => $text_translate,
+                'link' => $link,
+                'author_img' => $author_img,
+                'link_img' => ('/'. 'image/'. $title. '.jpg'),
+            ];
+        }
 
         if(is_numeric($post)) {
 
             $word = Word::query()->where('id', $post)->get();
                 if($word->contains($post)) {
+                    $word = wordAccept($word[0]['id'], $word[0]['title'], $word[0]['title_translate'], $word[0]['text'], $word[0]['text_translate'], $word[0]['link'], $word[0]['author_img']);
                     return view('words.show', compact('word', 'wordCount'));
                 } else {
                     return view('words.index');
@@ -60,6 +73,7 @@ class WordController extends Controller
             $word = Word::query()->where('title', $post)->get();
 
                 if($word->toArray() ==! null) {
+                    $word = wordAccept($word[0]['id'], $word[0]['title'], $word[0]['title_translate'], $word[0]['text'], $word[0]['text_translate'], $word[0]['link'], $word[0]['author_img']);
                     return view('words.show', compact('word', 'wordCount')); 
                 } else {
                     return view('words.index');
@@ -67,3 +81,7 @@ class WordController extends Controller
         }  
     }
 }
+
+
+
+
