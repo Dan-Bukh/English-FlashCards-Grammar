@@ -6,28 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EnglishGrammar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <style>
-        a {
-            color: #0d6efd;
-            text-decoration:none;
-        }
-        a:hover{
-            color: #198754;
-
-            text-decoration:underline;
-        }
-        h1, h2, h3, h4, p {
-            color:#041b3d;
-        }
-        body {
-            background-color: #ffff;
-            margin-top: 0.0em;
-        }
-        header, nav{
-            border-bottom: 1px solid #0D1B2A;
-            background-color: #ffff;
-        }
-    </style>
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     @include('includes.header')

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GrammarController;
 use App\Http\Controllers\SeparateController;
+use App\Http\Controllers\WordAllController;
 use App\Http\Controllers\WordController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,9 +26,18 @@ Route::redirect('/home', '/')->name('home.redirect');
 Route::get('grammar', [GrammarController::class, 'index'])->name('grammar');
 Route::get('grammar/{post}', [GrammarController::class, 'show'])->name('grammar.show');
 
+Route::get('words-all', [WordAllController::class, 'index'])->name('words-all');
+
+Route::get('words/create', [WordController::class, 'create'])->name('words.create');
+Route::post('words', [WordController::class, 'store'])->name('words.store');
 
 Route::get('words', [WordController::class, 'index'])->name('words');
 Route::get('words/{post}', [WordController::class, 'show'])->name('words.show');
+
+Route::delete('words/{post}', [WordController::class, 'destroy'])->name('words.destroy');
+
+Route::get('words/{post}/edit', [WordController::class, 'edit'])->name('words.edit');
+Route::put('words/{post}', [WordController::class, 'update'])->name('words.update');
 
 Route::get('separate', [SeparateController::class, 'index'])->name('separate');
 

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Word extends Model
 {
     public $incrementing = false;
+    public $timestamps = false;
     
     protected $fillable = [
         'id',

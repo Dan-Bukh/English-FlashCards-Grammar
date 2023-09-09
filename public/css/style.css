@@ -1,0 +1,18 @@
+a {
+    color: #0d6efd;
+    text-decoration:none;
+}
+a:hover{
+    color: #198754;
+    text-decoration:underline;
+}
+h1, h2, h3, h4, p {
+    color:#041b3d;
+}
+nav {
+    background-color: #ffff;
+}
+#link-words-all, #link-words-none {
+    color:#041b3d;
+    text-decoration:none;
+}
