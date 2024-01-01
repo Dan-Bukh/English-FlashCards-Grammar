@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rule;
-use Illuminate\Http\Request;
+
 
 class GrammarController extends Controller
 {
-    public function index(Request $request) 
+    public function index() 
     {
         $posts = [
             ['title' => 'Времена глагола', 
@@ -106,16 +106,12 @@ class GrammarController extends Controller
                 ['link' => 'simple', 'Порядок слов в предложении'],
             ],
         ];
-       //dd($posts);
         return view('rules.index', compact(['posts']));
     }
 
-    public function show(Request $request, string $ruleLink) 
+    public function show(string $ruleLink) 
     {
-        
-       //return view('rules.renderHtml');
-        $rule = Rule::query()->where('link', $ruleLink)->get();
-
+        $rule = Rule::query()->where('link', htmlspecialchars($ruleLink))->get();
         return view('rules.show', compact('rule'));
 
         

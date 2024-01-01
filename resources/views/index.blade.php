@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="text-center">
-            <h1>Welcome!!!</h1>
+            <h1>Добро Пожаловать на сайт изучения Английского языка</h1>
             
         </div>
     </div>
